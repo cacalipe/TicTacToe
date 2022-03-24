@@ -1,6 +1,7 @@
+from game_logic.check_winner import check_winner
 from game_logic.configs import TicTacToeConfig
 
-game:TicTacToeConfig = TicTacToeConfig()
+game = TicTacToeConfig()
 
 board = game.board
 counter = 0
@@ -33,3 +34,8 @@ while True:
             print(board[row][col], end=' ')
         print()
     print('-='*20)
+
+    winner = check_winner(turn, board, game)
+    if winner:
+        print(winner)
+        break
