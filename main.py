@@ -16,6 +16,9 @@ print('-='*20,'\nPlayer wins by completing a streak...\nInvite your friend to pl
 
 while True:
     counter += 1
+    if counter == 10:
+        print('The game ended in a draw!')
+        break
     if not counter % 2 == 0:
         turn = game.player_a
     elif counter % 2 == 0:
